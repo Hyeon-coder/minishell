@@ -1,0 +1,54 @@
+# 1. 기본 빌트인 및 외부 명령어
+echo "--- Basic Commands ---"
+ls -l
+/bin/pwd
+env
+cd /tmp
+pwd
+cd -
+export VAR="hello world"
+echo "Variable is $VAR"
+export | grep VAR
+unset VAR
+echo "Unsetting VAR, next line should be empty"
+env | grep VAR
+
+# 2. 파이프 및 리다이렉션
+echo "--- Pipes and Redirects ---"
+echo "line1\nline2" > test_file.txt
+cat < test_file.txt | wc -l > output.txt
+cat output.txt
+ls -l non_existent_file > /dev/null 2>&1
+
+# 3. Heredoc 테스트
+echo "--- Heredoc ---"
+cat << EOF | grep 'is a'
+this is a test
+another line
+EOF
+
+# 4. 복잡한 따옴표 및 변수 확장
+echo "--- Complex Quotes & Expansions ---"
+export A="expansion"
+export B="test"
+echo "'$A' is a single quote $B"
+echo ""''""''""
+echo "This '$A' is a '$B'"
+echo $?
+echo $NON_EXISTENT_VAR
+
+# 5. 에러 케이스 (메모리 해제 확인)
+echo "--- Error Cases ---"
+non_existent_command | cat
+>
+| ls
+echo "unclosed quote'
+
+# 6. 복합 명령어
+echo "--- Complex command ---"
+cat < Makefile | grep SRC | wc -l >> output.txt
+cat output.txt
+
+# 최종 정리
+rm -f test_file.txt output.txt
+exit
