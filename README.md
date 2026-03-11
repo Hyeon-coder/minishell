@@ -132,15 +132,6 @@ Midway through development, a Parser interface change broke the Executor integra
 
 ---
 
-## Team
-
-| Member | Role |
-|---|---|
-| **Juhyeon Lee** | Lexer, Parser, Expander |
-| Teammate | Executor, Builtins |
-
----
-
 ## License
 
 This project was developed as part of the 42 curriculum at Hive Helsinki.
