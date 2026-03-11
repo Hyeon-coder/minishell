@@ -19,33 +19,33 @@ A minimal shell implementation inspired by **bash**, built as a team project at 
 
 ```
                          ┌─────────────────────────────┐
-                         │        User Input            │
+                         │        User Input           │
                          └─────────────┬───────────────┘
                                        │
                                        ▼
                          ┌─────────────────────────────┐
-                         │          Lexer               │
-                         │  (Tokenization, Quote state) │
+                         │          Lexer              │
+                         │  (Tokenization, Quote state)│
                          └─────────────┬───────────────┘
                                        │  Token List
                                        ▼
                          ┌─────────────────────────────┐
-                         │          Parser              │
-                         │  (AST Build, Redirections)   │
+                         │          Parser             │
+                         │  (AST Build, Redirections)  │
                          └─────────────┬───────────────┘
                                        │  Command Table
                                        ▼
                          ┌─────────────────────────────┐
-                         │         Expander             │
-                         │  ($VAR expansion, Quote      │
-                         │   removal, Retokenization)   │
+                         │         Expander            │
+                         │  ($VAR expansion, Quote     │
+                         │   removal, Retokenization)  │
                          └─────────────┬───────────────┘
                                        │  Expanded Commands
                                        ▼
                          ┌─────────────────────────────┐
-                         │         Executor             │
-                         │  (fork/exec, Pipes, FD mgmt, │
-                         │   Builtins, Heredoc via pipe) │
+                         │         Executor            │
+                         │  (fork/exec, Pipes, FD mgmt,│
+                         │  Builtins, Heredoc via pipe)│
                          └─────────────────────────────┘
 ```
 
