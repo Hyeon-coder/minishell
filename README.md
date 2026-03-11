@@ -11,25 +11,7 @@ A minimal shell implementation inspired by **bash**, built as a team project at 
 
 ## Demo
 
-```
-$ ./minishell
-minishell$ echo "Hello, World!"
-Hello, World!
-minishell$ ls -la | grep src | wc -l
-1
-minishell$ export NAME=minishell
-minishell$ echo "Welcome to $NAME"
-Welcome to minishell
-minishell$ cat << EOF | tr a-z A-Z
-> hello from heredoc
-> EOF
-HELLO FROM HEREDOC
-minishell$ echo $?
-0
-minishell$ exit
-exit
-$
-```
+![Demo](assets/demo.gif)
 
 ---
 
