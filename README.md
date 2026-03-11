@@ -111,9 +111,3 @@ Single quotes suppress all expansion, while double quotes allow `$VAR` expansion
 
 ### 4. Team Interface Design
 Midway through development, a Parser interface change broke the Executor integration. We resolved this by **defining interfaces first** (data structures, function signatures) and implementing independently against those contracts — a valuable lesson in collaborative C development.
-
----
-
-## License
-
-This project was developed as part of the 42 curriculum at Hive Helsinki.
